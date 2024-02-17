@@ -3,9 +3,11 @@
 let buttons = document.querySelectorAll(".button");
 let input = document.querySelector(".input");
 let submit = document.querySelector(".submit");
+
 submit.addEventListener("click", () => {
     input.value = calc.calculate(input.value);
     input.focus();
+    console.log(`input value is ${input.value}`);
 });
 
 let empty = document.querySelector(".delete");
@@ -13,6 +15,7 @@ let empty = document.querySelector(".delete");
 empty.addEventListener("click", () => {
     input.value = "";
     input.focus();
+    console.log(`input value is ${input.value}`);
 });
 
 
@@ -21,6 +24,7 @@ for (let button of buttons) {
     button.addEventListener("click", () => {
         input.value += button.getAttribute("value");
         input.focus();
+        console.log(`input value is ${input.value}`);
     })
 }
 
@@ -38,7 +42,7 @@ function Calculator() {
 
     }
     this.calculate = function (string) { 
-        let split = string.split(""),
+        let split = string.split(" "),
                 a = +split[0],
                 op = split[1],
                 b = +split[2];
@@ -48,6 +52,10 @@ function Calculator() {
         this.methods[operator] = does;
     }
 }
+
+
+
+
 
 // console.log(calc.calculate());
 
