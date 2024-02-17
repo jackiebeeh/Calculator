@@ -4,6 +4,8 @@
 
 An online calculator created as part of the Odin Project by Sanelma Brown.
 
+Live code: <a href="https://jackiebeeh.github.io/Calculator/">Click here to visit website</a>
+
 *************************************************
 
 Credits:
