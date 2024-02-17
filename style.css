@@ -1,1 +1,123 @@
 /* Style sheet for the Calculator project */
+
+/* 
+My Colors:
+white: #F2EBF0
+dark: #012623
+bright green: #5D8C60
+pale green: #657371
+grey: #B8BFBE 
+*/
+
+* {
+    margin: 0;
+    padding:0;
+    color: white;
+    background-color: #012623;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("./images/background-image.jpeg");
+    background-size:cover;
+
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    padding: .5rem 0;
+    font-weight: 900;
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #012623;
+    background-color: #F2EBF0;
+}
+.calculator{
+    height: 400px;
+    width: 300px;
+    background-color: #012623;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5%;
+    box-shadow: white 0 0 60px 0px;
+    border: white 3px solid;
+}
+.output,
+.input {
+    content: "";
+    height: 50px;
+    width: 85%;
+    background: #B8BFBE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: #012623 inset 0 0 10px;
+    border: #5D8C60 3px solid;
+    color: #012623;
+    font-size: large;
+    font-weight: 900;
+    text-align: center;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.operators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    flex-flow: wrap-reverse;
+}
+.button ,
+.submit,
+.delete{
+    height: 30px;
+    width: 30px;
+    background-color: #012623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    border: #657371 2px solid;
+    border-radius: 5px;
+    font-weight: 900;
+}
+.button:hover,
+.submit:hover,
+.delete:hover {
+    cursor: pointer;
+    background-color: #657371;
+    border: 2px solid white;
+    box-shadow: 0 0 8px white;
+}
+
+.footer {
+    background-color: #01262390;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px black;
+}
