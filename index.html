@@ -9,34 +9,30 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="header">My Calculator</div>
-    <div class="calculator">
-        <input class="input output">
-        <div class="buttons">
-            <div class="operators">
-                <div class="button plus" value=" + ">+</div>
-                <div class="button minus" value=" - ">-</div>
-                <div class="button multiply" value=" * ">x</div>
-                <div class="button devide" value=" / ">/</div>
-                <div class="submit">=</div>
-            </div>
-            <div class="numbers">
-                <div class="button zero" value="0"> 0 </div>
-                <div class="button one" value="1"> 1 </div>
-                <div class="button two" value="2"> 2 </div>
-                <div class="button three" value="3"> 3 </div>
-                <div class="button four" value="4"> 4 </div>
-                <div class="button five" value="5"> 5 </div>
-                <div class="button six" value="6"> 6 </div>
-                <div class="button seven" value="7"> 7 </div>
-                <div class="button eight" value="8"> 8 </div>
-                <div class="button nine" value="9"> 9 </div>
-                <div class="button decimal" value="."> . </div>
-                <div class="delete" > del </div>
-
-            </div>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="previous-operand" data-previous-operand></div>
+            <div class="current-operand" data-current-operand></div>
         </div>
+        <div class="button ac span-two" data-all-clear >AC</div>
+        <div class="button delete" data-delete>Del</div>
+        <div class="button devide" data-operation value=" / ">/</div>
+        <div class="button one" data-number value="1">1</div>
+        <div class="button two" data-number value="2">2</div>
+        <div class="button three" data-number value="3">3</div>
+        <div class="button multiply" data-operation value=" * ">*</div>
+        <div class="button four" data-number value="4">4</div>
+        <div class="button five" data-number value="5">5</div>
+        <div class="button six" data-number value="6">6</div>
+        <div class="button plus" data-operation value=" + ">+</div>
+        <div class="button seven" data-number value="7">7</div>
+        <div class="button eight" data-number value="8">8</div>
+        <div class="button nine" data-number value="9">9</div>
+        <div class="button minus" data-operation value=" - ">-</div>
+        <div class="button decimal" value="." data-number>.</div>
+        <div class="button zero" data-number value="0">0</div>
+        <div class="button submit span-two" data-equals>=</div>
     </div>
-    <div class="footer">Website designed and created by <span><a href="https://github.com/jackiebeeh">Sanelma Brown</a></span></div>
+    <div class="footer">Website designed and created by: <span><a href="https://github.com/jackiebeeh">Sanelma Brown</a></span></div>
 </body>
 </html>
