@@ -1,4 +1,4 @@
-// // JavaScript for the Calculator project
+// JavaScript for the Calculator project
 
 // Query Selectors:
 let previousOperandElement = 
@@ -76,6 +76,7 @@ class Calculator {
         const stringNumber = number.toString();
         const integerDigits = parseFloat(stringNumber.split(".")[0]);
         const decimalDigits = stringNumber.split(".")[1];
+        console.log(typeof(decimalDigits));
         let integerDisplay;
         if (isNaN(integerDigits)) {
             integerDisplay = "";
