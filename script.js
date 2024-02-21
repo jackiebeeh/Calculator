@@ -101,7 +101,7 @@ operatorButtons.forEach(button => {
     button.addEventListener("click", () => {
         let previous = previousOperandElement.innerText;
         let lastChar = previous.charAt(previous.length -1);
-        if (isNaN(lastChar)) {
+        if (isNaN(lastChar) && currentOperandElement.innerText === "") {
             calculator.updateOperator();
             calculator.updateDisplay();
         }
