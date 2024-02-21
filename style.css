@@ -25,9 +25,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    
-    /* height: 100vh; */
     min-height: 700px;
 }
 .calculator-grid{
@@ -51,13 +48,19 @@ body {
     box-shadow: white 0 0 50px 0px;
     font-weight: 900;
     text-shadow: 0px 0px 10px #012623;
-   user-select: none;
+    user-select: none;
+    transition: background-color 0.6s ease-in-out;
 }
 .button:hover {
-    background-color: #B8BFBE;
-    border: 2px solid white;
+    background-color: #657371;
+    border: 1px solid white;
     box-shadow: 0 0 8px white;
-    -webkit-text-stroke: 1px #012623;
+}
+.red:hover {
+    background-color: #c65f5f80
+}
+.submit:hover {
+    background-color: #65737190
 }
 .span-two {
     grid-column: span 2;
