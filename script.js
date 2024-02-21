@@ -76,7 +76,6 @@ class Calculator {
         const stringNumber = number.toString();
         const integerDigits = parseFloat(stringNumber.split(".")[0]);
         const decimalDigits = stringNumber.split(".")[1];
-        console.log(typeof(decimalDigits));
         let integerDisplay;
         if (isNaN(integerDigits)) {
             integerDisplay = "";
@@ -127,4 +126,58 @@ deleteButton.addEventListener("click", () => {
 equalsButton.addEventListener("click", () => {
     calculator.calculate();
     calculator.updateDisplay();
+});
+
+// Keyboard support:
+document.addEventListener("keydown", (e) => {
+    // Numbers:
+    if (e.key === "0" || e.key === "1" || e.key === "2" || e.key === "3" 
+    || e.key === "4" || e.key === "5" || e.key === "6" || e.key === "7" 
+    || e.key === "8" || e.key === "9" || e.key === "." ) {
+        console.log(e.key);
+        calculator.appendNumber(e.key);
+        calculator.updateDisplay();
+    }
+    // Functions:
+    if (e.key === "Enter"){
+        calculator.calculate();
+        calculator.updateDisplay();
+    }
+    if (e.key === "Escape") {
+        calculator.allClear();
+        calculator.updateDisplay();
+    } 
+    if (e.key === "Backspace") {
+        calculator.delete();
+        calculator.updateDisplay();
+    } 
+    // Operators
+    if ((e.key === "+")|| (e.key === "-")) {
+        let previous = previousOperandElement.innerText;
+        let lastChar = previous.charAt(previous.length -1);
+        if (isNaN(lastChar) && currentOperandElement.innerText === "") {
+            calculator.updateOperator();
+            calculator.updateDisplay();
+        }
+        calculator.chooseOperator(e.key);
+        calculator.updateDisplay();
+    }
+    if (e.key === "Shift") { 
+        addEventListener("keydown", (e) => {
+            if (e.key === "*" || e.key === "/" || e.key === "^") {
+                let previous = previousOperandElement.innerText;
+                let lastChar = previous.charAt(previous.length -1);
+                if (isNaN(lastChar) && currentOperandElement.innerText === "") {
+                    calculator.updateOperator();
+                    calculator.updateDisplay();
+                }
+                calculator.chooseOperator(e.key);
+                calculator.updateDisplay();
+            };
+            if (e.key === "=") {
+                calculator.calculate();
+                calculator.updateDisplay();
+            }
+        });
+    }
 });
