@@ -15,7 +15,6 @@ grey: #B8BFBE
     margin: 0;
     box-sizing: border-box;
     color: white;
-    font-family: sans-serif;
     font-weight: normal;
 }
 body {
@@ -26,6 +25,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 700px;
+    font-family: sans-serif;
 }
 .calculator-grid{
     display: grid;
@@ -101,4 +101,11 @@ body {
     position: fixed;
     bottom: 0;
     gap: 10px;
+}
+.footer span {
+    font-family: Reey;
+}
+@font-face {
+    font-family: "Reey";
+    src: url(./fonts/reey/Reey-Regular.woff);
 }
