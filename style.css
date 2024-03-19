@@ -1,14 +1,12 @@
 /* Style sheet for the Calculator project */
 
-/* 
-My Colors:
-white: #F2EBF0
-dark: #012623
-bright green: #5D8C60
-pale green: #657371
-grey: #B8BFBE 
-*/
+/* fonts */
+@font-face {
+    font-family: "Reey";
+    src: url(./fonts/reey/Reey-Regular.woff);
+}
 
+/* General */
 * ,
 *::before,
 *::after {
@@ -20,13 +18,19 @@ grey: #B8BFBE
 body {
     margin: 0;
     padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-image: url("./images/background-image.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 700px;
+    min-height: 120vh;
     font-family: sans-serif;
 }
+
+/* Calculator */
 .calculator-grid{
     display: grid;
     justify-content: center;
@@ -90,6 +94,8 @@ body {
     font-size: 2.5rem;
     font-weight: 900;
 }
+
+/* Footer */
 .footer {
     background-color: #01262390;
     width: 100%;
@@ -98,14 +104,20 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px black;
-    position: fixed;
+    position: static;
     bottom: 0;
     gap: 10px;
 }
 .footer span {
     font-family: Reey;
 }
-@font-face {
-    font-family: "Reey";
-    src: url(./fonts/reey/Reey-Regular.woff);
-}
+
+
+/* 
+My Colors:
+white: #F2EBF0
+dark: #012623
+bright green: #5D8C60
+pale green: #657371
+grey: #B8BFBE 
+*/
